@@ -1,0 +1,16 @@
+# Ignore important files
+*.key
+*.pem
+*.crt
+*.p12
+*.pfx
+*.env
+.env*
+secrets/
+config/*.json
+config/*.yaml
+config/*.yml
+important/
+private/
+*.bak
+*.log

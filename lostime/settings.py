@@ -37,6 +37,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    "accounts",
+    "transactions",
+    "budgets",
 ]
 
 MIDDLEWARE = [
@@ -74,8 +77,16 @@ WSGI_APPLICATION = 'lostime.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'mydatabase',
+        'USER': 'denver',
+        'PASSWORD': '2026',
+        'HOST': 'localhost',
+        'PORT': '5432',
+        'OPTIONS': {
+        # Optional: enable connection pooling in Django 5.1+
+        "pool": True
+        }
     }
 }
 
